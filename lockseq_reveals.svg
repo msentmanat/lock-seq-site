@@ -1,65 +1,79 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1025 310" role="img" aria-labelledby="title desc">
   <title id="title">What LOCK-seq Reveals</title>
-  <desc id="desc">LOCK-seq reveals on-target integration, imprecise targeting, donor concatemerization, random integration, and viral integration sites.</desc>
+  <desc id="desc">A single-row diagram showing precise knock-in, imprecise insertion/concatentation, non-KI alleles, and random integrations, with a legend for genomic sequence, intended insert, vector backbone, indel/mutation, and random integration.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eef6ff"/><stop offset="1" stop-color="#f6fffd"/></linearGradient>
-    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2457c5"/><stop offset="1" stop-color="#0e9f9a"/></linearGradient>
     <style>
-      .title{font:800 46px Inter,Arial,sans-serif;fill:#172033}.sub{font:500 20px Inter,Arial,sans-serif;fill:#5b677a}.label{font:800 22px Inter,Arial,sans-serif;fill:#172033}.small{font:500 16px Inter,Arial,sans-serif;fill:#5b677a}.gene{stroke:#172033;stroke-width:7;stroke-linecap:round}.donor{fill:#2457c5}.insert{fill:#0e9f9a}.warn{fill:#f2a93b}.bad{fill:#d94f70}.card{fill:white;stroke:#dfe6f2;stroke-width:2}.probe{stroke:#0e9f9a;stroke-width:5;stroke-linecap:round}.arrow{stroke:#2457c5;stroke-width:5;fill:none;marker-end:url(#arrow)}
+      .box{fill:#fff;stroke:#8dbbff;stroke-width:1.3}.title{font:700 24px Arial,Helvetica,sans-serif;fill:#061a57}.label{font:700 16px Arial,Helvetica,sans-serif}.small{font:400 16px Arial,Helvetica,sans-serif}.legend{font:400 14px Arial,Helvetica,sans-serif;fill:#061a57}.gene{stroke:#222;stroke-width:2;stroke-linecap:round}.dash{stroke-dasharray:7 7;stroke-width:2}.thin{stroke:#8dbbff;stroke-width:1}.seg{stroke:#333;stroke-width:1}.grey{fill:#f2f6fa}.green{fill:#087b41}.orange{fill:#f37016}.purple{fill:#5a3495}.blue{fill:#2f66b3}.red{fill:#df151d}.pale{fill:#fff2f2}.arc{fill:none;stroke:#df151d;stroke-width:2;stroke-dasharray:5 4}.ellipsis{font:700 30px Arial,Helvetica,sans-serif;fill:#111}
     </style>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2457c5"/></marker>
   </defs>
-  <rect width="1200" height="520" rx="32" fill="url(#bg)"/>
-  <text x="54" y="72" class="title">What LOCK-seq Reveals</text>
-  <text x="54" y="108" class="sub">One assay reports expected on-target edits and unexpected donor or viral integration events.</text>
+  <rect class="box" x="1" y="4" width="1023" height="302" rx="9"/>
+  <text class="title" x="512" y="37" text-anchor="middle">What LOCK-seq Reveals  (Unbiased, Genome-wide)</text>
 
-  <g transform="translate(54 150)">
-    <rect class="card" x="0" y="0" width="340" height="140" rx="22"/>
-    <text x="24" y="42" class="label">Precise on-target KI</text>
-    <line class="gene" x1="28" y1="88" x2="312" y2="88"/>
-    <rect class="insert" x="134" y="68" width="72" height="40" rx="9"/>
-    <path class="probe" d="M120 52 l20 16 M155 52 l20 16 M190 52 l20 16"/>
-    <text x="24" y="124" class="small">Confirms intended integration structure</text>
+  <g transform="translate(0,0)">
+    <text class="label" x="98" y="76" text-anchor="middle" fill="#088342">Precise KI</text>
+    <line class="dash" x1="98" y1="84" x2="98" y2="116" stroke="#088342"/>
+    <circle cx="98" cy="132" r="15" fill="none" stroke="#088342" stroke-width="3"/>
+    <path d="M89 132 l7 8 l14 -18" fill="none" stroke="#088342" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 
-  <g transform="translate(430 150)">
-    <rect class="card" x="0" y="0" width="340" height="140" rx="22"/>
-    <text x="24" y="42" class="label">Imprecise targeting</text>
-    <line class="gene" x1="28" y1="88" x2="312" y2="88"/>
-    <rect class="insert" x="118" y="68" width="52" height="40" rx="9"/>
-    <rect class="warn" x="178" y="68" width="36" height="40" rx="9"/>
-    <path d="M230 64 l24 48 M254 64 l-24 48" stroke="#d94f70" stroke-width="6" stroke-linecap="round"/>
-    <text x="24" y="124" class="small">Detects partial or rearranged insertions</text>
+  <g transform="translate(0,0)">
+    <text class="label" x="307" y="75" text-anchor="middle" fill="#ff5b00">Imprecise</text>
+    <text class="small" x="307" y="96" text-anchor="middle" fill="#ff5b00">imprecision /</text>
+    <text class="small" x="307" y="116" text-anchor="middle" fill="#ff5b00">concatentation</text>
+    <line class="dash" x1="307" y1="123" x2="307" y2="151" stroke="#ff5b00"/>
+    <path d="M307 126 l16 29 h-32 z" fill="none" stroke="#ff5b00" stroke-width="3" stroke-linejoin="round"/>
+    <line x1="307" y1="136" x2="307" y2="145" stroke="#ff5b00" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="307" cy="151" r="1.8" fill="#ff5b00"/>
   </g>
 
-  <g transform="translate(806 150)">
-    <rect class="card" x="0" y="0" width="340" height="140" rx="22"/>
-    <text x="24" y="42" class="label">Donor concatemerization</text>
-    <line class="gene" x1="28" y1="88" x2="312" y2="88"/>
-    <rect class="insert" x="98" y="68" width="52" height="40" rx="9"/>
-    <rect class="insert" x="154" y="68" width="52" height="40" rx="9" opacity=".8"/>
-    <rect class="insert" x="210" y="68" width="52" height="40" rx="9" opacity=".6"/>
-    <text x="24" y="124" class="small">Resolves repeated donor/vector copies</text>
+  <g transform="translate(0,0)">
+    <text class="label" x="508" y="76" text-anchor="middle" fill="#005ecb">Non-KI</text>
+    <text class="label" x="508" y="98" text-anchor="middle" fill="#005ecb">alleles</text>
+    <line class="dash" x1="508" y1="107" x2="508" y2="145" stroke="#005ecb"/>
+    <circle cx="508" cy="134" r="14" fill="white" stroke="#005ecb" stroke-width="3"/>
   </g>
 
-  <g transform="translate(54 330)">
-    <rect class="card" x="0" y="0" width="528" height="140" rx="22"/>
-    <text x="24" y="42" class="label">Random donor integration</text>
-    <line class="gene" x1="28" y1="92" x2="500" y2="92"/>
-    <circle cx="126" cy="92" r="13" fill="#172033"/><circle cx="258" cy="92" r="13" fill="#172033"/><circle cx="398" cy="92" r="13" fill="#172033"/>
-    <rect class="bad" x="386" y="66" width="56" height="42" rx="9"/>
-    <path class="arrow" d="M220 56 C270 22 332 24 386 64"/>
-    <text x="24" y="124" class="small">Maps donor-derived sequence away from the target locus</text>
+  <g transform="translate(0,0)">
+    <text class="label" x="787" y="78" text-anchor="middle" fill="#e00000">Random integrations</text>
+    <text class="small" x="787" y="99" text-anchor="middle" fill="#e00000">(full or partial vectors)</text>
+    <path class="arc" d="M653 173 C653 118 922 118 922 173"/>
+    <path class="arc" d="M740 173 C740 99 835 99 835 173"/>
+    <path class="arc" d="M833 173 C833 119 944 119 944 173"/>
+    <line class="dash" x1="787" y1="106" x2="787" y2="130" stroke="#e00000"/>
   </g>
 
-  <g transform="translate(618 330)">
-    <rect class="card" x="0" y="0" width="528" height="140" rx="22"/>
-    <text x="24" y="42" class="label">Viral integration site mapping</text>
-    <line class="gene" x1="28" y1="92" x2="500" y2="92"/>
-    <path d="M118 72 h70 l22 20 l-22 20 h-70 l-22 -20 z" fill="url(#blue)"/>
-    <path class="probe" d="M98 54 l22 16 M136 54 l22 16 M174 54 l22 16"/>
-    <circle cx="330" cy="92" r="13" fill="#172033"/>
-    <path class="arrow" d="M218 92 L306 92"/>
-    <text x="24" y="124" class="small">Supports lentiviral, retroviral, AAV, and vector studies</text>
+  <line class="gene" x1="24" y1="188" x2="973" y2="188"/>
+  <text class="ellipsis" x="982" y="193">...</text>
+
+  <!-- Precise KI block -->
+  <rect class="grey seg" x="43" y="180" width="20" height="17"/>
+  <rect class="green seg" x="63" y="180" width="70" height="17"/>
+  <rect class="grey seg" x="133" y="180" width="21" height="17"/>
+
+  <!-- Imprecise block -->
+  <rect class="orange seg" x="224" y="180" width="88" height="17"/>
+  <rect class="purple seg" x="312" y="180" width="61" height="17"/>
+  <rect class="grey seg" x="373" y="180" width="20" height="17"/>
+
+  <!-- Non-KI block -->
+  <rect class="grey seg" x="468" y="180" width="20" height="17"/>
+  <rect class="blue seg" x="488" y="180" width="39" height="17"/>
+  <rect class="grey seg" x="527" y="180" width="20" height="17"/>
+
+  <!-- Random integrations as red blocks on genome line -->
+  <rect class="red seg" x="631" y="180" width="44" height="17"/>
+  <rect class="red seg" x="717" y="180" width="44" height="17"/>
+  <rect class="red seg" x="822" y="180" width="44" height="17"/>
+  <rect class="red seg" x="908" y="180" width="44" height="17"/>
+
+  <line class="thin" x1="24" y1="242" x2="1000" y2="242"/>
+
+  <!-- Legend -->
+  <g transform="translate(52,262)">
+    <rect class="grey seg" x="0" y="0" width="22" height="18"/><text class="legend" x="34" y="14">Genomic sequence</text>
+    <rect class="green seg" x="203" y="0" width="25" height="18"/><text class="legend" x="240" y="14">Intended insert</text>
+    <rect class="purple seg" x="380" y="0" width="25" height="18"/><text class="legend" x="417" y="14">Vector backbone</text>
+    <rect class="orange seg" x="577" y="0" width="25" height="18"/><text class="legend" x="614" y="14">Indel / mutation</text>
+    <rect class="red seg" x="758" y="0" width="25" height="18"/><text class="legend" x="795" y="14">Random integration</text>
   </g>
 </svg>
