@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">What LOCK-seq Reveals</title>
+  <desc id="desc">LOCK-seq reveals on-target integration, imprecise targeting, donor concatemerization, random integration, and viral integration sites.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eef6ff"/><stop offset="1" stop-color="#f6fffd"/></linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2457c5"/><stop offset="1" stop-color="#0e9f9a"/></linearGradient>
+    <style>
+      .title{font:800 46px Inter,Arial,sans-serif;fill:#172033}.sub{font:500 20px Inter,Arial,sans-serif;fill:#5b677a}.label{font:800 22px Inter,Arial,sans-serif;fill:#172033}.small{font:500 16px Inter,Arial,sans-serif;fill:#5b677a}.gene{stroke:#172033;stroke-width:7;stroke-linecap:round}.donor{fill:#2457c5}.insert{fill:#0e9f9a}.warn{fill:#f2a93b}.bad{fill:#d94f70}.card{fill:white;stroke:#dfe6f2;stroke-width:2}.probe{stroke:#0e9f9a;stroke-width:5;stroke-linecap:round}.arrow{stroke:#2457c5;stroke-width:5;fill:none;marker-end:url(#arrow)}
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2457c5"/></marker>
+  </defs>
+  <rect width="1200" height="520" rx="32" fill="url(#bg)"/>
+  <text x="54" y="72" class="title">What LOCK-seq Reveals</text>
+  <text x="54" y="108" class="sub">One assay reports expected on-target edits and unexpected donor or viral integration events.</text>
+
+  <g transform="translate(54 150)">
+    <rect class="card" x="0" y="0" width="340" height="140" rx="22"/>
+    <text x="24" y="42" class="label">Precise on-target KI</text>
+    <line class="gene" x1="28" y1="88" x2="312" y2="88"/>
+    <rect class="insert" x="134" y="68" width="72" height="40" rx="9"/>
+    <path class="probe" d="M120 52 l20 16 M155 52 l20 16 M190 52 l20 16"/>
+    <text x="24" y="124" class="small">Confirms intended integration structure</text>
+  </g>
+
+  <g transform="translate(430 150)">
+    <rect class="card" x="0" y="0" width="340" height="140" rx="22"/>
+    <text x="24" y="42" class="label">Imprecise targeting</text>
+    <line class="gene" x1="28" y1="88" x2="312" y2="88"/>
+    <rect class="insert" x="118" y="68" width="52" height="40" rx="9"/>
+    <rect class="warn" x="178" y="68" width="36" height="40" rx="9"/>
+    <path d="M230 64 l24 48 M254 64 l-24 48" stroke="#d94f70" stroke-width="6" stroke-linecap="round"/>
+    <text x="24" y="124" class="small">Detects partial or rearranged insertions</text>
+  </g>
+
+  <g transform="translate(806 150)">
+    <rect class="card" x="0" y="0" width="340" height="140" rx="22"/>
+    <text x="24" y="42" class="label">Donor concatemerization</text>
+    <line class="gene" x1="28" y1="88" x2="312" y2="88"/>
+    <rect class="insert" x="98" y="68" width="52" height="40" rx="9"/>
+    <rect class="insert" x="154" y="68" width="52" height="40" rx="9" opacity=".8"/>
+    <rect class="insert" x="210" y="68" width="52" height="40" rx="9" opacity=".6"/>
+    <text x="24" y="124" class="small">Resolves repeated donor/vector copies</text>
+  </g>
+
+  <g transform="translate(54 330)">
+    <rect class="card" x="0" y="0" width="528" height="140" rx="22"/>
+    <text x="24" y="42" class="label">Random donor integration</text>
+    <line class="gene" x1="28" y1="92" x2="500" y2="92"/>
+    <circle cx="126" cy="92" r="13" fill="#172033"/><circle cx="258" cy="92" r="13" fill="#172033"/><circle cx="398" cy="92" r="13" fill="#172033"/>
+    <rect class="bad" x="386" y="66" width="56" height="42" rx="9"/>
+    <path class="arrow" d="M220 56 C270 22 332 24 386 64"/>
+    <text x="24" y="124" class="small">Maps donor-derived sequence away from the target locus</text>
+  </g>
+
+  <g transform="translate(618 330)">
+    <rect class="card" x="0" y="0" width="528" height="140" rx="22"/>
+    <text x="24" y="42" class="label">Viral integration site mapping</text>
+    <line class="gene" x1="28" y1="92" x2="500" y2="92"/>
+    <path d="M118 72 h70 l22 20 l-22 20 h-70 l-22 -20 z" fill="url(#blue)"/>
+    <path class="probe" d="M98 54 l22 16 M136 54 l22 16 M174 54 l22 16"/>
+    <circle cx="330" cy="92" r="13" fill="#172033"/>
+    <path class="arrow" d="M218 92 L306 92"/>
+    <text x="24" y="124" class="small">Supports lentiviral, retroviral, AAV, and vector studies</text>
+  </g>
+</svg>
